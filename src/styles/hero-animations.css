@@ -1,0 +1,85 @@
+
+/* Existing CSS for basic animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Aurora gradient animation for hero-title - now with slower animation and no glow */
+@keyframes aurora {
+  0% {
+    background-position: 100% 50%;
+  }
+  50% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
+.hero-title {
+  background: linear-gradient(
+    45deg, 
+    #9b87f5, 
+    #D946EF, 
+    #8B5CF6, 
+    #0EA5E9, 
+    #1EAEDB, 
+    #6E59A5,
+    #4ADE80, 
+    #FEF7CD,
+    #F97316
+  );
+  background-size: 400% 400%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-fill-color: transparent;
+  animation: aurora 15s ease infinite; /* Slowed down from 8s to 15s */
+  filter: brightness(1.1); /* Kept brightness but removed text-shadow */
+}
+
+.hero-subtitle {
+  opacity: 0;
+  animation: fadeIn 0.8s ease-out forwards;
+  animation-delay: 0.5s;
+}
+
+/* Keep other existing animations */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}

@@ -1,0 +1,32 @@
+
+/* Custom styles for larger stars in the hero background */
+.star {
+  width: 2px !important;
+  height: 2px !important;
+}
+
+.star--medium {
+  width: 3px !important;
+  height: 3px !important;
+}
+
+.star--large {
+  width: 4px !important;
+  height: 4px !important;
+}
+
+/* Also increase the glow effect */
+.star::before {
+  width: 6px !important;
+  height: 6px !important;
+}
+
+.star--medium::before {
+  width: 9px !important;
+  height: 9px !important;
+}
+
+.star--large::before {
+  width: 12px !important;
+  height: 12px !important;
+}
